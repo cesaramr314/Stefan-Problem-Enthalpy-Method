@@ -12,8 +12,8 @@ from IPython.display import HTML
 
 plt.rcParams["animation.embed_limit"] = 150          # MB, for to_jshtml
 
-WATER = "#3F76E4"           # minecraft water
-ICE = "#8DB4FE"             # minecraft ice
+WATER = "#3F76E4"           # minecraft water :)
+ICE = "#8DB4FE"             # minecraft ice   :)
 SNOW = "#EEF5FF"            # light blue, almost white
 INK = "#1B2B45"             # text and lines
 
@@ -51,7 +51,7 @@ def record(solver, t_end, n_frames=60, power=2.0, keep_theta=True):
 
 
 def H_from_phase(phi, h, mat, theta_s, theta_l):
-    # enthalpy of a solid {phi > 0} at temperature theta_s surrounded by liquid at temperature theta_l;
+    # enthalpy of a solid {phi > 0} at temperature theta_s surrounded by liquid at temperature theta_l,
     # the cells cut by the interface get a mixture of both (anti-aliasing)
     w = np.clip(0.5 + phi / h, 0.0, 1.0)
     return w * H_from_theta(theta_s, mat, liquid=False) + (1 - w) * H_from_theta(theta_l, mat, liquid=True)
