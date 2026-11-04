@@ -24,7 +24,7 @@ where $\beta(H)$ is the Kirchhoff potential. The phases are recovered from $H$, 
 - **Exact solutions** for testing: the Neumann solution (Fickian case) and a travelling wave with a melting front (Cattaneo case).
 - **Visualization** of the phase evolution from dendritic initial data: layers of ice and water in 1D, a snowflake in 2D and a cubic dendrite in 3D.
 
-The notebooks contain a short description of each scheme. The mathematical details and references will be in the document in `Doc/`.
+The notebooks contain a short description of each scheme. The technical details (derivation of the schemes, stability conditions, the travelling wave solution, the tests and references) are in the notes [`Doc/Enthalpy_solvers.pdf`](Doc/Enthalpy_solvers.pdf).
 
 ## Results
 
@@ -34,7 +34,7 @@ The notebooks contain a short description of each scheme. The mathematical detai
 <p align="center">
   <img src="Animations/tw_taus.gif" width="80%">
 </p>
-<p align="center"><em>Travelling wave for different values of τ (numerical solution vs. exact solution, dashed).</em></p>
+<p align="center"><em>Numerical travelling waves for different values of τ.</em></p>
 
 ## Repository structure
 
@@ -46,7 +46,8 @@ The notebooks contain a short description of each scheme. The mathematical detai
 ├── Fickian.ipynb        # validation against the Neumann solution + animations in 1D, 2D and 3D
 ├── Cattaneo.ipynb       # validation against the travelling wave + animation for different τ
 ├── Animations/          # gifs
-└── Doc/                 # document with the mathematical details
+└── Doc/
+    └── Enthalpy_solvers.pdf   # notes with the technical details
 ```
 
 ## How to run
