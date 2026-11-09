@@ -50,6 +50,10 @@ The notebooks contain a short description of each scheme. The technical details 
     └── Enthalpy_solvers.pdf   # notes with the technical details
 ```
 
+## Use of AI tools
+
+Claude Opus 5.5 (Anthropic) was used extensively for cleaning, optimizing and refactoring the code, for generating some of the tests, and for helping draft the notes and this README. All generated files were reviewed in detail before being included.
+
 ## How to run
 
 The code only needs `numpy`, `scipy`, `matplotlib` and `scikit-image`. The notebooks import the `.py` files, so they have to be in the same folder. The notebooks in the repository are already executed.
