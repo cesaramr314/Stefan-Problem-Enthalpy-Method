@@ -1,6 +1,6 @@
 # Stefan-Problem-Enthalpy-Method
 
-Enthalpy method solver for the Stefan problem in 1D, 2D and 3D, with some animations of the phase evolution. Also includes a numerical exploration of an extension to Cattaneo-type (hyperbolic) heat conduction, tested against a travelling wave solution.
+Enthalpy method solver for the Stefan problem, with a single implementation for 1D, 2D and 3D and some animations of the phase evolution. Also includes a numerical exploration of an extension to Cattaneo-type (hyperbolic) heat conduction, tested against a travelling wave solution.
 
 <p align="center">
   <img src="Animations/stefan_2d.gif" width="45%">
@@ -19,7 +19,7 @@ where $\beta(H)$ is the Kirchhoff potential. The phases are recovered from $H$, 
 
 ## What is implemented
 
-- **Fickian (classical) case.** Explicit finite volume scheme on a uniform mesh in $d = 1, 2, 3$, with Dirichlet and Neumann boundary conditions through ghost cells, and different conductivity and heat capacity in each phase. The time step is chosen so that the scheme is monotone, and the scheme is conservative (the heat that enters through the boundary is tracked).
+- **Fickian (classical) case.** Explicit finite volume scheme on a uniform mesh, written once for any dimension through array slicing and used in $d = 1, 2, 3$, with Dirichlet and Neumann boundary conditions through ghost cells, and different conductivity and heat capacity in each phase. The time step is chosen so that the scheme is monotone, and the scheme is conservative (the heat that enters through the boundary is tracked).
 - **Cattaneo case.** Fourier's law is replaced by the Cattaneo law $\tau q_t + q = -\nabla u$. The flux lives on the cell faces, the relaxation term is treated implicitly and the transport explicitly; for $\tau = 0$ it is exactly the Fickian scheme. A small $O(h)$ numerical viscosity is added (see below).
 - **Exact solutions** for testing: the Neumann solution (Fickian case) and a travelling wave with a melting front (Cattaneo case).
 - **Visualization** of the phase evolution from dendritic initial data: layers of ice and water in 1D, a snowflake in 2D and a cubic dendrite in 3D.
